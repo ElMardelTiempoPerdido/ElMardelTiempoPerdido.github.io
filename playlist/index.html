@@ -65,6 +65,7 @@
 
       <!-- ============================ Off-canvas navigation =========================== -->
 
+
     <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
         <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
             <img src="/img/close.png" alt="Close"/>
@@ -172,6 +173,8 @@
             <!-- // .navbar-inner -->
         </div>
 
+
+
         <!-- ============================ Header & Logo bar =========================== -->
 
 
@@ -213,7 +216,7 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-            <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+            
             <div class="clearfix"></div>
         </div>
         
@@ -264,8 +267,19 @@
       
 <!-- ============================ Footer =========================== -->
 
+<!--
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+
+<div class="aplayer" data-id="6752670578" data-server="netease" data-type="playlist" data-mode="list" data-fixed="true" data-mini="true" ></div>
+-->
+
+
+
 <footer>
     <div class="container">
+
             <div class="copy">
                 <p>
                     &copy; 2018<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By -01 / -i /-EOF / --. All Rights Reserved.
@@ -285,7 +299,28 @@
             </div>
             <div class="clearfix"> </div>
         </div>
+
+
 </footer>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+<div>
+<meting-js 
+	server="netease" 
+	type="playlist" 
+	id="6752670578"
+	fixed="true" 
+	autoplay="false"
+	loop="all"
+	order="random"
+	preload="auto"
+	list-folded="ture"
+	list-max-height="200px"
+	lrc-type="1">
+</meting-js>	
+</div>
 
 <!-- ============================ END Footer =========================== -->
       <!-- Load our scripts -->

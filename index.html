@@ -65,6 +65,7 @@
 
       <!-- ============================ Off-canvas navigation =========================== -->
 
+
     <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
         <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
             <img src="/img/close.png" alt="Close"/>
@@ -172,6 +173,8 @@
             <!-- // .navbar-inner -->
         </div>
 
+
+
         <!-- ============================ Header & Logo bar =========================== -->
 
 
@@ -247,8 +250,15 @@
             <hr>
             <div class="clearfix"></div>
         </div>
+<!--
+        <iframe align="middle" frameborder="no" border="0" marginwidth="0" marginheight="0" width=300 height=250 src="//music.163.com/outchain/player?type=0&id=6752670578&auto=0&height=430"></iframe>
+-->
+
     </div>
 </section>
+
+
+
 
 
 <section id="intro">
@@ -274,10 +284,13 @@
         
         <!--此处内容会导致显示bug，挪到了show_blog_on_index_backup.txt-->
         
+
+        <!--
         <nav class="pagination" role="pagination">
           
           <a class="pull-right" href="/page/2/">Older Posts →</a>
         </nav>
+        -->
     </div>
 </section>
 <section id="statement">
@@ -286,17 +299,45 @@
             <p></p>
         </div>
     </div>
+
+    
 </section>
 
 
+<!--
+const ap = new APlayer({
+    container: document.getElementById('player'),
+    fixed: true,
+    audio: [{
+        name: 'name',
+        artist: 'artist',
+        url: 'url.mp3',
+        cover: 'cover.jpg',
+    }]
+});
+<link rel="stylesheet" href="../../../../node_modules/aplayer/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script src="../../../../node_modules/aplayer/dist/APlayer.min.js"></script>
 
+-->
 <!-- ============================ END Content =========================== -->
 
       
 <!-- ============================ Footer =========================== -->
 
+<!--
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+
+<div class="aplayer" data-id="6752670578" data-server="netease" data-type="playlist" data-mode="list" data-fixed="true" data-mini="true" ></div>
+-->
+
+
+
 <footer>
     <div class="container">
+
             <div class="copy">
                 <p>
                     &copy; 2018<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By -01 / -i /-EOF / --. All Rights Reserved.
@@ -316,7 +357,28 @@
             </div>
             <div class="clearfix"> </div>
         </div>
+
+
 </footer>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+<div>
+<meting-js 
+	server="netease" 
+	type="playlist" 
+	id="6752670578"
+	fixed="true" 
+	autoplay="false"
+	loop="all"
+	order="random"
+	preload="auto"
+	list-folded="ture"
+	list-max-height="200px"
+	lrc-type="1">
+</meting-js>	
+</div>
 
 <!-- ============================ END Footer =========================== -->
       <!-- Load our scripts -->
