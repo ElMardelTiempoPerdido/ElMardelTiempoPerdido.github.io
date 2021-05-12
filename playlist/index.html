@@ -64,6 +64,10 @@
 <body id="index" class="lightnav animsition">
 
       <!-- ============================ Off-canvas navigation =========================== -->
+<script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+<script>
+$(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',timeout:8000});
+</script>
 
 
     <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
@@ -82,39 +86,10 @@
             <li><a href="/" class="animsition-link" title="Screenshots">Logs</a></li>
 
         </br>
-    </br>
+        </br>
             <li><a href="/" class="animsition-link" title="Entities">Entities</a></li>
 
             <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
-
-
-            <!-- Dropdown Menu -->
-            <!---
-			 
-            <li>
-                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
-                <ul class="sb-submenu">
-                    
-                        <li><a href="/" target="_BLANK" class="animsition-link">None</a></li>
-                    
-                </ul>
-            </li>
-            ->
-            
-            
-
-            <!--
-            
-            <li>
-                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
-                <ul class="sb-submenu">
-                    
-                    <li><a href="" class="animsition-link">CFC9C6</a></li>
-                    
-                </ul>
-            </li>
-            
-             -->
 
         </ul>
         <!-- Lists in Slidebars -->
@@ -124,6 +99,7 @@
             <!--<li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>-->
         </ul>
     </div>
+
     
     <!-- ============================ END Off-canvas navigation =========================== -->
 
@@ -147,7 +123,10 @@
                     <!-- Info-bar -->
                     <nav>
                         <ul class="nav">
-                            <li><a href="/" class="animsition-link">CFC9C6</a></li>
+                            <li><a href="/" 
+                                target="_blank" 
+                                title="cfc9c6Home"
+                                class="animsition-link">CFC9C6</a></li>
                             <li class="nolink">Welcome.</li>
                             
                             
@@ -267,14 +246,6 @@
       
 <!-- ============================ Footer =========================== -->
 
-<!--
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
-
-<div class="aplayer" data-id="6752670578" data-server="netease" data-type="playlist" data-mode="list" data-fixed="true" data-mini="true" ></div>
--->
-
 
 
 <footer>
@@ -314,7 +285,7 @@
 	fixed="true" 
 	autoplay="false"
 	loop="all"
-	order="random"
+	order="list"
 	preload="auto"
 	list-folded="ture"
 	list-max-height="200px"
