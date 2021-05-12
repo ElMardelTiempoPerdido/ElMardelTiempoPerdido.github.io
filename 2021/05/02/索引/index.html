@@ -77,19 +77,19 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
         <!-- Lists in Slidebars -->
         <ul class="sb-menu">
             
-            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/" class="aaaa" title="Home" target="_blank">Home</a></li>
 
-            <li><a href="2021/05/02/索引/" class="animsition-link" title="Catalogue">Catalogue</a></li>
+            <li><a href="2021/05/02/索引/" class="aaaa" title="Catalogue" target="_blank">Catalogue</a></li>
 
-            <li><a href="/" class="animsition-link" title="Screenshots">Screenshots</a></li>
+            <li><a href="/" class="aaaa" title="Screenshots" target="_blank">Screenshots</a></li>
 
-            <li><a href="/" class="animsition-link" title="Screenshots">Logs</a></li>
+            <li><a href="/" class="aaaa" title="Logs" target="_blank">Logs</a></li>
 
         </br>
         </br>
-            <li><a href="/" class="animsition-link" title="Entities">Entities</a></li>
+            <li><a href="/" class="aaaa" title="Entities" target="_blank">Entities</a></li>
 
-            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <li><a href="/archives" class="aaaa" title="archive" target="_blank">archives</a></li>
 
         </ul>
         <!-- Lists in Slidebars -->
@@ -115,7 +115,7 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
                 <div class="container">
                     <!-- Nav logo -->
                     <div class="logo">
-                        <a href="/" title="Logo" class="animsition-link">
+                        <a href="/" title="Logo" class="aaaa" target="_blank" >
                          <img src="/img/logo.png" alt="Logo" width="35px;"/> 
                         </a>
                     </div>
@@ -123,18 +123,25 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
                     <!-- Info-bar -->
                     <nav>
                         <ul class="nav">
-                            <li><a href="/" 
-                                target="_blank" 
+                            
+                            <li><a  
                                 title="cfc9c6Home"
-                                class="animsition-link">CFC9C6</a></li>
+                                class="aaaa">#CFC9C6</a></li>
+
                             <li class="nolink">Welcome.</li>
+
                             
+
                             
+
                             
+
                             
+
                             
                             <li><a href="https://weibo.com/u/2945899160" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
                             
+
                              <!--<li class="nolink"><span>Welcome!</span></li>-->
                         </ul>
                     </nav>
@@ -387,8 +394,15 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
             <div class="clearfix"> </div>
         </div>
 
-
+        <div id="totop" style="position:fixed;bottom:150px;right:50px;cursor: pointer;">
+    <a title="Go to top"><img src="/img/totop.png" height="30"/></a>
+    </div>
+        <script src="/js/totop.js"></script>
 </footer>
+
+
+
+
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
@@ -410,6 +424,7 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
 </div>
 
 <!-- ============================ END Footer =========================== -->
+
       <!-- Load our scripts -->
 <!-- Resizable 'on-demand' full-height hero -->
 <script type="text/javascript">
