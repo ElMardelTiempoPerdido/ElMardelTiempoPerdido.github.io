@@ -3320,10 +3320,10 @@ footer .footer_bottom {
 	vertical-align: baseline;
 }
 #intro .col-md-8.col-md-offset-2 p a {
-  color: #0275d8;
+  color: #41929a;
 }
 #intro .col-md-8.col-md-offset-2 p a:hover {
-  color: #2C4A77;
+  color: #9a7632;
 }
 /* Import the font file with the icons in it */
 @font-face { font-family: 'icons'; src:  url('../fonts/icons.woff') format('woff'); font-weight: normal; font-style: normal; }
@@ -3389,6 +3389,23 @@ nav.pagination {
   height: 0;
   overflow: hidden;
   opacity: 0;
+}
+
+.bilibili {
+    position: relative;
+    width: 100%;
+}
+@media only screen and (max-width: 767px) {
+    .bilibili {height: 15em;max-width: 25em;}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .bilibili {height: 20em;max-width: 30em;}
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .bilibili {height: 30em;max-width: 40em;}
+}
+@media only screen and (min-width: 1200px) {
+    .bilibili {height: 40em;max-width: 50em;}
 }
 
 .entry .gist {
