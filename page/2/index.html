@@ -207,14 +207,23 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-            <h4 id="cfc9c6-tech是什么？"><a href="#cfc9c6-tech是什么？" class="headerlink" title="cfc9c6.tech是什么？"></a>▶ cfc9c6.tech是什么？</h4>
+
+            <h4 id="cfc9c6-tech是什么？"><a href=" " class="headerlink" title="cfc9c6.tech是什么？"></a>▶ cfc9c6.tech是什么？</h4>
             <p>cfc9c6.tech 是一个存放个人oc设定的网站，您可以通过右侧导航栏在此浏览以下内容：</p>
             <ul type="none">
             <div class="text" style="text-align:center;">
                 <div class="text" style="text-align:left;">
-            <li><a>-- <font size=4><a href="/2021/05/02/索引/">Entities</a></font> = 按世界观归类的角色设定与世界观基础信息</a></li>
-            <li><a>-- <font size=4><a href="/2021/05/21/Screenshots/">Screenshots</a></font> = 图像形式的内容，可能包括插图、漫画或视频等</a></li>
-            <li><a>-- <font size=4><a href="/2021/05/21/Logs/" >Logs</a></font> = 除设定文以外的文本形式内容，可能包括不必要的补充信息
+            <li><a href="/2021/05/02/索引/">
+                <b>Entities</b>
+                 = 按世界观归类的角色设定与世界观基础信息
+                </a></li>
+            <li><a href="/2021/05/21/Screenshots/">
+                <b>Screenshots</b>
+                 = 图像形式的内容，可能包括插图、漫画或视频等
+                </a></li>
+            <li><a href="/2021/05/21/Logs/" >
+                <b>Logs</b>
+                 = 除设定文以外的文本形式内容，可能包括不必要的补充信息
             </a></li>
             <!--<li><a>-- Entities = *暂时留空</a>></li>-->
             </div>
@@ -233,7 +242,16 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
         </div>
 -->
         <div class="col-md-8 col-md-offset-2">
-            <h4 id="页面有bug？"><a href="页面有bug？" class="headerlink" title="cfc9c6.tech是什么？"></a>▶ 页面有bug？</h4>
+            <h4 id="1234"><a href="" class="headerlink" title="cfc9c6.tech是什么？"></a>▶ 是否有推荐的阅读顺序？</h4>
+            <p>您可以按文档在汇总页面上排列的顺序阅读，也可以按照喜好随机选择页面阅读。</p>
+            <p>每篇文档中第一次出现的<code>角色名</code>与<code>可能会使人产生疑问的名词</code>均被标注为<a title="这个没什么好跳转的"><code>可点击跳转的超链接</code></a>形式，它们将在合适的时候为您指出方向。</p>
+            <hr>
+            <div class="clearfix"></div>
+        </div>
+
+
+        <div class="col-md-8 col-md-offset-2">
+            <h4 id="页面有bug？"><a href=" " class="headerlink" title="cfc9c6.tech是什么？"></a>▶ 页面有bug？</h4>
             <p>感谢您的细心浏览！可向cfc9c6@foxmail.com进行反馈。</p>
             <p>您也可以向此邮箱投递其他信息。</p>
             <hr>
@@ -316,7 +334,7 @@ const ap = new APlayer({
     <div class="container">
 
             <div class="copy">
-                <p>
+                <p >
                     &copy; 2018<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By -01 / -i /-EOF / --. All Rights Reserved.
                 </p>
                 <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
@@ -327,9 +345,11 @@ const ap = new APlayer({
                     
                     
                     
+                    <!--
                     
                     <li><a href="https://weibo.com/u/2945899160" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
                     
+                    -->
                 </ul>
             </div>
             <div class="clearfix"> </div>
@@ -350,6 +370,8 @@ const ap = new APlayer({
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+
+<!--
 <div>
 <meting-js 
 	server="netease" 
@@ -365,7 +387,23 @@ const ap = new APlayer({
 	lrc-type="1">
 </meting-js>	
 </div>
+-->
 
+<div>
+    <meting-js 
+        server="tencent" 
+        type="playlist" 
+        id="8052649677"
+        fixed="true" 
+        autoplay="false"
+        loop="all"
+        order="list"
+        preload="auto"
+        list-folded="ture"
+        list-max-height="200px"
+        lrc-type="1">
+    </meting-js>	
+    </div>
 <!-- ============================ END Footer =========================== -->
 
       <!-- Load our scripts -->

@@ -259,7 +259,7 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
     <div class="container">
 
             <div class="copy">
-                <p>
+                <p >
                     &copy; 2018<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By -01 / -i /-EOF / --. All Rights Reserved.
                 </p>
                 <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
@@ -270,9 +270,11 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
                     
                     
                     
+                    <!--
                     
                     <li><a href="https://weibo.com/u/2945899160" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
                     
+                    -->
                 </ul>
             </div>
             <div class="clearfix"> </div>
@@ -293,6 +295,8 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+
+<!--
 <div>
 <meting-js 
 	server="netease" 
@@ -308,7 +312,23 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
 	lrc-type="1">
 </meting-js>	
 </div>
+-->
 
+<div>
+    <meting-js 
+        server="tencent" 
+        type="playlist" 
+        id="8052649677"
+        fixed="true" 
+        autoplay="false"
+        loop="all"
+        order="list"
+        preload="auto"
+        list-folded="ture"
+        list-max-height="200px"
+        lrc-type="1">
+    </meting-js>	
+    </div>
 <!-- ============================ END Footer =========================== -->
 
       <!-- Load our scripts -->
