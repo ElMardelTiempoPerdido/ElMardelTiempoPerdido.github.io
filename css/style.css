@@ -3070,7 +3070,7 @@ button.send{
 * Global footer, (all pages)
 ******************************************************* */
 footer {
-	padding:5% 0 0;
+	padding:2% 0 1%;
 	background:#151515;
 	z-index: 9;
 	position: relative;
@@ -3141,7 +3141,7 @@ footer .footer-top{
 	padding-bottom: 60px;
 }
 footer .copy {
-	float: left;
+	float: right;
 	margin-top: 5px;
 }
 footer .copy p {
@@ -3330,16 +3330,42 @@ nav.pagination {
 	display: block;
 }
 
+.rotate-text{
+	transform:rotate(-90deg);
+        -ms-transform:rotate(-90deg); /* Internet Explorer 9*/
+        -moz-transform:rotate(-90deg); /* Firefox */
+        -webkit-transform:rotate(-90deg); /* Safari 和 Chrome */
+        -o-transform:rotate(-90deg); /* Opera */
+}
+.world-name-container{
+	position: relative;
+	float:left;
+	height:375px;
+	width:150px;
+	background-color:#f7f7f7;
+	box-shadow:4px 4px 5px rgb(216, 212, 208);
+}
+.personhead-table{
+	float:right;
+	/*box-shadow:4px 4px 5px #aaa;*/
+}
+.personhead-container {
+	position: relative;
+	height:125px;
+	width:125px;
+	overflow:hidden;
+}
+
 .personhead {
 	z-index: -1;
-	width: 100%;
-	height: 100%;
+	width: 125px;
+	height: 125px;
 	overflow: hidden;
 	transition:1s;
 }
 .personhead:hover {
-	width: 100%;
-	height: 100%;
+	width: 125px;
+	height: 125px;
 	overflow: hidden;
 	filter: blur(5px);
 	transition:1s;
@@ -3372,5 +3398,49 @@ nav.pagination {
 }
 
 .personheadtext{
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin-top:-10px;
+	margin-left:-20px;
+	font-family:'Courier New';
+	font-weight:bold;
 	color:rgb(100,77,52)
+}
+
+.maask-worldname {
+	position:absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+	transition:opacity 1s;
+	opacity: 0;
+}
+.maask-worldname--blur {
+	background-color:rgba(0,0,0,0.8);
+}
+.maask-worldname:hover{
+	position:absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+	transition:opacity 1s;
+	opacity: 1;
+}
+
+.worldname-text{
+	position: absolute;
+	text-align: left;
+	margin-top:25px;
+	margin-left:10px;
+	font-family:'Courier New';
+	font-weight:bold;
+	color:rgb(146, 133, 96);
+	font-size:0.8em;
 }
