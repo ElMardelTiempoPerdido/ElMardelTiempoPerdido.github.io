@@ -3444,3 +3444,9 @@ nav.pagination {
 	color:rgb(146, 133, 96);
 	font-size:0.8em;
 }
+
+.world-section{
+	z-index: -1;
+	margin-bottom:50px;
+	margin-top:50px;
+}
