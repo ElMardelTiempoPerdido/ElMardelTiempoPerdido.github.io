@@ -3354,8 +3354,8 @@ nav.pagination {
 .world-name-container{
 	position: relative;
 	float:left;
-	height:375px;
-	width:150px;
+	height:100%;
+	width:12vw;
 	background-color:#f7f7f7;
 	box-shadow:4px 4px 5px rgb(216, 212, 208);
 }
@@ -3365,8 +3365,8 @@ nav.pagination {
 }
 .personhead-container {
 	position: relative;
-	height:125px;
-	width:125px;
+	height:10vw;
+	width:10vw;
 	overflow:hidden;
 }
 
