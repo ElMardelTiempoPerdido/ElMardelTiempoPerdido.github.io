@@ -3341,13 +3341,24 @@ nav.pagination {
 }
 
 @media screen and (max-width:700px){
-	.world-name-container{
+	.world-name-container-1{
 		position: relative;
 		float:left;
 		height:100%;
-		width:22vw;
+		width:20vw;
 		background-color:#f7f7f7;
 		box-shadow:4px 4px 5px rgb(216, 212, 208);
+		overflow:hidden;
+	}
+
+	.world-name-container-3{
+		position: relative;
+		float:left;
+		height:100%;
+		width:20vw;
+		background-color:#f7f7f7;
+		box-shadow:4px 4px 5px rgb(216, 212, 208);
+		overflow:hidden;
 	}
 	.personhead-container {
 		position: relative;
@@ -3355,17 +3366,63 @@ nav.pagination {
 		width:15vw;
 		overflow:hidden;
 	}
+	.world-section-1{
+		height:15vw;
+		margin-bottom:50px;
+		margin-top:50px;
+	}
+	.world-section-3{
+		height:45vw;
+		margin-bottom:50px;
+		margin-top:50px;
+	}
+
+	.worldname-text{
+		position: absolute;
+		text-align: left;
+		margin-top:10%;
+		margin-left:5%;
+		font-family:'Courier New';
+		font-weight:bold;
+		color:rgb(146, 133, 96);
+		font-size :1vw;
+		line-height:3vw;
+	}
+
+	.personheadtext{
+		position: absolute;
+		top:50%;
+		left:50%;
+		margin-top:-3.5vw;
+		margin-left:-3vw;
+		font-family:'Courier New';
+		font-weight:bold;
+		color:rgb(100,77,52);
+		font-size:1.2vw;
+	}
+	
+	
 }
 
 
 @media screen and (min-width:700px){
-	.world-name-container{
+	.world-name-container-1{
 		position: relative;
 		float:left;
 		height:100%;
 		width:12vw;
 		background-color:#f7f7f7;
 		box-shadow:4px 4px 5px rgb(216, 212, 208);
+		overflow:hidden;
+	}
+	.world-name-container-3{
+		position: relative;
+		float:left;
+		height:100%;
+		width:12vw;
+		background-color:#f7f7f7;
+		box-shadow:4px 4px 5px rgb(216, 212, 208);
+		overflow:hidden;
 	}
 	.personhead-container {
 		position: relative;
@@ -3373,11 +3430,44 @@ nav.pagination {
 		width:10vw;
 		overflow:hidden;
 	}
+	.world-section-1{
+		height:10vw;
+		margin-bottom:50px;
+		margin-top:50px;
+	}
+	.world-section-3{
+		height:30vw;
+		margin-bottom:50px;
+		margin-top:50px;
+	}
+	.worldname-text{
+		position: absolute;
+		text-align: left;
+		margin-top:25px;
+		margin-left:10px;
+		font-family:'Courier New';
+		font-weight:bold;
+		color:rgb(146, 133, 96);
+		font-size:0.8vw;
+	}
+
+	.personheadtext{
+		position: absolute;
+		top:50%;
+		left:50%;
+		margin-top:-1vw;
+		margin-left:-1.6vw;
+		font-family:'Courier New';
+		font-weight:bold;
+		color:rgb(100,77,52);
+		font-size:1.2vw;
+	}
+	
+	
 }
 
 .personhead-table{
 	float:right;
-	/*box-shadow:4px 4px 5px #aaa;*/
 }
 
 .personhead {
@@ -3421,16 +3511,6 @@ nav.pagination {
 	opacity: 1;
 }
 
-.personheadtext{
-	position: absolute;
-	top:50%;
-	left:50%;
-	margin-top:-10px;
-	margin-left:-20px;
-	font-family:'Courier New';
-	font-weight:bold;
-	color:rgb(100,77,52)
-}
 
 .maask-worldname {
 	position:absolute;
@@ -3458,19 +3538,4 @@ nav.pagination {
 	opacity: 1;
 }
 
-.worldname-text{
-	position: absolute;
-	text-align: left;
-	margin-top:25px;
-	margin-left:10px;
-	font-family:'Courier New';
-	font-weight:bold;
-	color:rgb(146, 133, 96);
-	font-size:0.8em;
-}
 
-.world-section{
-	z-index: -1;
-	margin-bottom:50px;
-	margin-top:50px;
-}
