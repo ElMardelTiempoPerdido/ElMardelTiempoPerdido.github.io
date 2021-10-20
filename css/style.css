@@ -3341,7 +3341,7 @@ nav.pagination {
 }
 
 @media screen and (max-width:700px){
-	.world-name-container-1{
+	.world-name-container{
 		position: relative;
 		float:left;
 		height:100%;
@@ -3351,15 +3351,6 @@ nav.pagination {
 		overflow:hidden;
 	}
 
-	.world-name-container-3{
-		position: relative;
-		float:left;
-		height:100%;
-		width:20vw;
-		background-color:#f7f7f7;
-		box-shadow:4px 4px 5px rgb(216, 212, 208);
-		overflow:hidden;
-	}
 	.personhead-container {
 		position: relative;
 		height:15vw;
@@ -3368,13 +3359,23 @@ nav.pagination {
 	}
 	.world-section-1{
 		height:15vw;
-		margin-bottom:50px;
-		margin-top:50px;
+		margin-bottom:35px;
+		margin-top:35px;
+	}
+	.world-section-2{
+		height:30vw;
+		margin-bottom:35px;
+		margin-top:35px;
 	}
 	.world-section-3{
 		height:45vw;
-		margin-bottom:50px;
-		margin-top:50px;
+		margin-bottom:35px;
+		margin-top:35px;
+	}
+	.world-section-4{
+		height:60vw;
+		margin-bottom:35px;
+		margin-top:35px;
 	}
 
 	.worldname-text{
@@ -3385,8 +3386,8 @@ nav.pagination {
 		font-family:'Courier New';
 		font-weight:bold;
 		color:rgb(146, 133, 96);
-		font-size :1vw;
-		line-height:3vw;
+		font-size :1.5vw;
+		line-height:2.5vw;
 	}
 
 	.personheadtext{
@@ -3398,7 +3399,7 @@ nav.pagination {
 		font-family:'Courier New';
 		font-weight:bold;
 		color:rgb(100,77,52);
-		font-size:1.2vw;
+		font-size:1.5vw;
 	}
 	
 	
@@ -3406,7 +3407,7 @@ nav.pagination {
 
 
 @media screen and (min-width:700px){
-	.world-name-container-1{
+	.world-name-container{
 		position: relative;
 		float:left;
 		height:100%;
@@ -3415,15 +3416,7 @@ nav.pagination {
 		box-shadow:4px 4px 5px rgb(216, 212, 208);
 		overflow:hidden;
 	}
-	.world-name-container-3{
-		position: relative;
-		float:left;
-		height:100%;
-		width:12vw;
-		background-color:#f7f7f7;
-		box-shadow:4px 4px 5px rgb(216, 212, 208);
-		overflow:hidden;
-	}
+
 	.personhead-container {
 		position: relative;
 		height:10vw;
@@ -3435,22 +3428,44 @@ nav.pagination {
 		margin-bottom:50px;
 		margin-top:50px;
 	}
+	.world-section-2{
+		height:20vw;
+		margin-bottom:50px;
+		margin-top:50px;
+	}
 	.world-section-3{
 		height:30vw;
+		margin-bottom:50px;
+		margin-top:50px;
+	}
+	.world-section-4{
+		height:40vw;
 		margin-bottom:50px;
 		margin-top:50px;
 	}
 	.worldname-text{
 		position: absolute;
 		text-align: left;
-		margin-top:25px;
-		margin-left:10px;
+		margin-top:5%;
+		margin-left:5%;
 		font-family:'Courier New';
 		font-weight:bold;
 		color:rgb(146, 133, 96);
 		font-size:0.8vw;
-	}
+		line-height: 2.5vw;
 
+	}
+	.nth-text{
+		position: absolute;
+		text-align: right;
+		float: right;
+		font-family:'Courier New';
+		font-weight:bold;
+		color:rgb(146, 133, 96);
+		font-size:1vw;
+		line-height: 2.5vw;
+
+	}
 	.personheadtext{
 		position: absolute;
 		top:50%;
@@ -3464,10 +3479,12 @@ nav.pagination {
 	}
 	
 	
+	
 }
 
 .personhead-table{
 	float:right;
+	/*box-shadow:4px 4px 5px #aaa;*/
 }
 
 .personhead {
@@ -3519,7 +3536,6 @@ nav.pagination {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-
 	transition:opacity 1s;
 	opacity: 0;
 }
@@ -3533,9 +3549,31 @@ nav.pagination {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-
 	transition:opacity 1s;
 	opacity: 1;
 }
 
 
+.maask-worldname2 {
+	position:absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	transition:opacity 1s;
+	opacity: 0;
+}
+.maask-worldname2--blur {
+	background-color:rgba(255,255,255,0.9);
+}
+.maask-worldname2:hover{
+	position:absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	transition:opacity 1s;
+	opacity: 1;
+}
