@@ -3373,23 +3373,23 @@ nav.pagination {
 	}
 	.world-section-1{
 		height:15vw;
-		margin-bottom:35px;
-		margin-top:35px;
+		margin-bottom:5px;
+		margin-top:5px;
 	}
 	.world-section-2{
 		height:30vw;
-		margin-bottom:35px;
-		margin-top:35px;
+		margin-bottom:5px;
+		margin-top:5px;
 	}
 	.world-section-3{
 		height:45vw;
-		margin-bottom:35px;
-		margin-top:0px;
+		margin-bottom:5px;
+		margin-top:-10px;
 	}
 	.world-section-4{
 		height:60vw;
-		margin-bottom:35px;
-		margin-top:35px;
+		margin-bottom:5px;
+		margin-top:5px;
 	}
 
 	.worldname-text{
