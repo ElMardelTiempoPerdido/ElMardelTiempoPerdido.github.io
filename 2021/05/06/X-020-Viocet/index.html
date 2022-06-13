@@ -306,6 +306,7 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
 
 
         <script src="/js/totop.js"></script>
+        <script src="/js/require.js"></script>
 </footer>
 
 
@@ -352,35 +353,8 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
 <!-- ============================ END Footer =========================== -->
 
 
-<script src="//require.js"></script>
-<script>
-    function sendQuestion(){
-        const nodemailer = require('nodemailer');
-        //var text = document.getElementById("my-textarea").value; 
-        let transporter = nodemailer.createTransport({
-            host: 'smtp.qq.com', 
-            port: 465, // SMTP 端口
-            auth: {   //发送者的账户和授权码
-                user: 'cfc9c6@qq.com', //账户
-                pass: 'gqxhbdnbseaibdff', //smtp授权码，到邮箱设置下获取
-            }
-        });
-        let mailOptions = {
-            from: '"111" <cfc9c6@qq.com>', // 发送者昵称和地址
-            to: 'panyitong2000@qq.com', // 接收者的邮箱地址
-            subject: '测试邮件', // 邮件主题
-            html: '111'
-        };
-    //发送邮件
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            return console.log(error);
-        }
-        console.log('邮件发送成功');
-    }); 
 
-    }
-    </script>
+
 
       <!-- Load our scripts -->
 <!-- Resizable 'on-demand' full-height hero -->
