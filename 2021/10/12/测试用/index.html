@@ -56,6 +56,12 @@
   
 
   <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+
+
+ <!-- <link rel="stylesheet" href="/loading.css">
+<script src="/loading.js"></script>
+-->
+
 </head>
 
 <!--
@@ -85,7 +91,7 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
 
             <li><a href="/2021/05/21/Logs/" class="aaaa" title="Logs" target="_blank">Logs</a></li>
 
-            
+            <li><a href="/2021/05/21/L/" class="aaaa" title="Logs" target="_blank">Tools</a></li>           
 
         </br>
         <p style="font-weight:bold;"><font color=#151515 font-weight=bold>>></font>>>></p>
@@ -226,6 +232,10 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
         <!--
 本页代码为原博文页面底部用于显示前/后一篇博客的按钮
 <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2022/06/13/%E6%8F%90%E9%97%AE%E7%AE%B1/" style="float: left;">
+        ← 提问箱
+    </a>
     
     
     <a class="pull-right" href="/2021/05/21/Logs/">
@@ -375,6 +385,36 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
     </div>-->
 <!-- ============================ END Footer =========================== -->
 
+
+<script src="//require.js"></script>
+<script>
+    function sendQuestion(){
+        const nodemailer = require('nodemailer');
+        //var text = document.getElementById("my-textarea").value; 
+        let transporter = nodemailer.createTransport({
+            host: 'smtp.qq.com', 
+            port: 465, // SMTP 端口
+            auth: {   //发送者的账户和授权码
+                user: 'cfc9c6@qq.com', //账户
+                pass: 'gqxhbdnbseaibdff', //smtp授权码，到邮箱设置下获取
+            }
+        });
+        let mailOptions = {
+            from: '"111" <cfc9c6@qq.com>', // 发送者昵称和地址
+            to: 'panyitong2000@qq.com', // 接收者的邮箱地址
+            subject: '测试邮件', // 邮件主题
+            html: '111'
+        };
+    //发送邮件
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            return console.log(error);
+        }
+        console.log('邮件发送成功');
+    }); 
+
+    }
+    </script>
 
       <!-- Load our scripts -->
 <!-- Resizable 'on-demand' full-height hero -->
