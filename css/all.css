@@ -3591,6 +3591,29 @@ nav.pagination {
 	transition:opacity 1s;
 	opacity: 1;
 }
+
+.my-box-button{
+	background-color:#E6E6E6;
+	border-radius:8px;
+	border:none;
+	padding-top:0.3em;
+	padding-bottom:0.3em;
+	padding-left:0.8em;
+	padding-right:0.8em;
+	outline:none;
+}
+
+.my-box-button:hover{
+	transition-property: background-color;
+	background-color:#bbb;
+	transition-duration: 1s, 1000ms;
+}
+
+.my-box-button:active{
+	transition-property: background-color;
+	background-color:#999;
+	transition-duration: 1s, 1000ms;
+}
 @charset "utf-8";
 /* CSS Document */
 
