@@ -23112,8 +23112,8 @@ AV_.init({
 global.window.AV = AV_;
 global.window.sendQuestion=()=> {
     const { Query, User } = AV;
-    var questext = document.querySelector('textarea');
-    if (questext.value == '') {
+    var questext = document.querySelectorAll('textarea');
+    if (questext[0].value == '') {
             alert('请输入提问内容')
     } 
     else {
@@ -23121,7 +23121,8 @@ global.window.sendQuestion=()=> {
         var TestObject_=AV.Object.extend('box_data');
         var tt=new TestObject_();
         tt.save({
-                question_text: questext.value
+                question_text: questext[0].value,
+                email: questext[1].value
         })
 
         alert('问题发送成功！')

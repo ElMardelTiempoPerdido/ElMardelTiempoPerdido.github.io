@@ -192,10 +192,12 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
         </div>
         <div class="col-md-8 col-md-offset-2">
       		<div style="text-align:center">
-  <a>▼ 请在此输入提问内容</a>
-  <br>
-  <br>
+  <div style="line-height:1.5em">
+  <a>▼ 请在此输入提问内容<br><font color="#bbbbbb" size="-2">*若提供邮箱（可选），您将收到邮件回复</font></a>
+  </div>
 <textarea id="my-textarea" style="max-width:60%;max-height:200px;min-width:60%;min-height:200px;"></textarea>
+  <br>
+<textarea id="my-emailarea" style="max-width:60%;max-height:36px;min-width:60%;min-height:36px;">在此输入邮箱...</textarea>
   <br>
   <button class="my-box-button" type="submit" onclick="sendQuestion()">提交问题</button>
 </div>
