@@ -200,7 +200,7 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
   <br>
 <textarea id="my-emailarea" style="max-width:60%;max-height:36px;min-width:60%;min-height:36px;">在此输入邮箱...</textarea>
   <br>
-  <button class="my-box-button" type="submit" onclick="sendQuestion()">提交问题</button>
+  <button class="my-box-button" type="submit" onclick="sendQuestionSMTP()">提交问题</button>
 </div>
 
 <p><a href="../../../../2022/07/01/%E6%8F%90%E9%97%AE%E7%AE%B1-%E5%9B%9E%E7%AD%94%E8%BF%87%E7%9A%84%E9%97%AE%E9%A2%98/">▶ 查看回答过的问题</a></p>
@@ -350,6 +350,33 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
 
 <script src="/js/require.js"></script>-->
 <script src="/js/lean-cloud-use-require2.js"></script>
+
+
+<script src ="https://smtpjs.com/v3/smtp.js"> </script>
+<script>
+    function sendQuestionSMTP()
+    {
+    
+        var questext = document.querySelectorAll('textarea');
+        if (questext[0].value == '') {
+                alert('请输入提问内容')
+        } 
+        else {
+            Email.send({
+            SecureToken : "3e64e9b1-c284-488a-aadc-fec9c6f100bc",
+            To : "cfc9c6@qq.com",
+            From : "cfdce4@elasticemail.com",
+            Subject : "测试提问箱",
+            Body : questext[0].value
+            }).then(
+            message => alert(message)
+            );
+        }
+    
+    }
+    
+</script>
+    
 <!--
 <div>
     <meting-js 

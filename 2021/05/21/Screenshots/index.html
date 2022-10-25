@@ -341,6 +341,33 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
 
 <script src="/js/require.js"></script>-->
 <script src="/js/lean-cloud-use-require2.js"></script>
+
+
+<script src ="https://smtpjs.com/v3/smtp.js"> </script>
+<script>
+    function sendQuestionSMTP()
+    {
+    
+        var questext = document.querySelectorAll('textarea');
+        if (questext[0].value == '') {
+                alert('请输入提问内容')
+        } 
+        else {
+            Email.send({
+            SecureToken : "3e64e9b1-c284-488a-aadc-fec9c6f100bc",
+            To : "cfc9c6@qq.com",
+            From : "cfdce4@elasticemail.com",
+            Subject : "测试提问箱",
+            Body : questext[0].value
+            }).then(
+            message => alert(message)
+            );
+        }
+    
+    }
+    
+</script>
+    
 <!--
 <div>
     <meting-js 
