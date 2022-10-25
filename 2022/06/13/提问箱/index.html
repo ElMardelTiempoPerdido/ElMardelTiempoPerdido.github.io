@@ -366,17 +366,21 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
             if (questext[1].value != ''){
                 econtent+="<br>【来自邮箱】"+questext[1].value;
             }
-            Email.send({
+            resout=Email.send({
             SecureToken : "4c3e6b04-fa26-415c-a536-25a8f705aac1",
             To : "cfc9c6@foxmail.com",
             From : "nekotoshiyuu@gmail.com",
             Subject : "【提问箱消息】",
             Body : econtent
-            }).then(
-            message => alert(message)
-            );
+            })
+            resout.then(function (resoutval) {
+                if (resoutval=="OK"){
+                    alert("问题发送成功！");
+                }else{
+                    alert("似乎出现了一些问题...请尝试稍后重新发送");
+                }       	         
+            })
         }
-    
     }
     
 </script>
