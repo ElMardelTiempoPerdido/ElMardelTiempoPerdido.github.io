@@ -382,12 +382,16 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
                 alert('请输入提问内容')
         } 
         else {
+            var econtent ="【提问内容】"+questext[0].value;
+            if (questext[1].value != ''){
+                econtent+="<br>【来自邮箱】"+questext[1].value;
+            }
             Email.send({
-            SecureToken : "b6252fbe-17d6-40e1-864f-70c36a7aeee0",
-            To : "cfc9c6@qq.com",
-            From : "cfdce4@elasticemail.com",
-            Subject : "测试提问箱",
-            Body : questext[0].value
+            SecureToken : "4c3e6b04-fa26-415c-a536-25a8f705aac1",
+            To : "cfc9c6@foxmail.com",
+            From : "nekotoshiyuu@gmail.com",
+            Subject : "【提问箱消息】",
+            Body : econtent
             }).then(
             message => alert(message)
             );
