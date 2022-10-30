@@ -129,7 +129,8 @@ h6 span,
 .navbar .nav > li > span {
 	font-family: 'Georgia', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 
-	font-style: italic;
+	font-style: normal;
+	font-weight:bold;
 	margin-left: 4px;
 	margin-right: 3px;
 	text-transform: none;
