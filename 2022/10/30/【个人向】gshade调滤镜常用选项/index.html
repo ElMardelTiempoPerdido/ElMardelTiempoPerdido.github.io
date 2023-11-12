@@ -227,14 +227,14 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
 <h1><span id="说明">说明</span></h1><p>本文记录一些<code>FF14 - gshade</code>插件调滤镜时个人常用的着色器，以及其中各个参数（仅从视觉上来看）的效果</p>
 <p><del>防止以后调滤镜忘了哪个是哪个</del></p>
 <hr>
-<h1><span id="常用着色器">常用着色器</span></h1><h2><span id="-lut">- LUT</span></h2><table style="text-align:center;">
+<h1><span id="常用着色器">常用着色器</span></h1><h2><span id="-lut">- LUT</span></h2><p>可以认为<code>LUT</code>提供了很多由其他作者预设好的调色滤镜，通常包含了对<code>色彩</code>和<code>亮度</code>的调整</p>
+<table style="text-align:center;">
   <tr>
     <td><div><img src="/2022/10/30/%E3%80%90%E4%B8%AA%E4%BA%BA%E5%90%91%E3%80%91gshade%E8%B0%83%E6%BB%A4%E9%95%9C%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9/lut-off.png"><br>未使用LUT</div></td>
-    <td><div><img src="/2022/10/30/%E3%80%90%E4%B8%AA%E4%BA%BA%E5%90%91%E3%80%91gshade%E8%B0%83%E6%BB%A4%E9%95%9C%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9/lut-on.png"><br>使用了LUT中的Gshade-Angelite预设</div></td>
+    <td><div><img src="/2022/10/30/%E3%80%90%E4%B8%AA%E4%BA%BA%E5%90%91%E3%80%91gshade%E8%B0%83%E6%BB%A4%E9%95%9C%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9/lut-on.png"><br>使用LUT</div></td>
     </tr>
  </table>
- 
-<p>可以认为<code>LUT</code>提供了很多由其他作者预设好的调色滤镜，通常包含了对<code>色彩</code>和<code>亮度</code>的调整</p>
+
 <p>自制滤镜时，推荐先在LUT中挑选一个与想要的效果相近的预设，在此基础上再使用其他着色器调整，可以节省不少精力<br> <div style="text-align:center;"><img src="/2022/10/30/%E3%80%90%E4%B8%AA%E4%BA%BA%E5%90%91%E3%80%91gshade%E8%B0%83%E6%BB%A4%E9%95%9C%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9/lut.png"><br>LUT中的参数<br><code>The LUT file to use:</code>选择一个LUT预设<br><code>LUT chroma amount:</code>LUT对色彩的调整强度<br><code>LUT luma amount:</code>LUT对亮度的调整强度</div></p>
 
 
@@ -257,7 +257,7 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
  </table>
 
 <h3><span id="gamma调整">Gamma调整</span></h3><p><code>BaseGamma:</code>基础伽马值，就是每次打开一个新游戏调整画面设置时“调整到看不见某一侧的图像且能看见另一侧图像”的那个</p>
-<p><code>EffectGammaR/G/B:</code>对RGB三个通道分别进行gamma矫正；gamma矫正可以简单地理解为：调整“将[实际的颜色]展示为[我们看到的颜色]”这一过程中的映射关系<br>以EffectGammaR(红)为例，将EffectGammaR的值拉高，从视觉上来看就是图像中的红色通道被增强了（色调变红），拉低则图像色调变得更偏蓝绿<br><img src="/2022/10/30/%E3%80%90%E4%B8%AA%E4%BA%BA%E5%90%91%E3%80%91gshade%E8%B0%83%E6%BB%A4%E9%95%9C%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9/gammaRGB-small.gif"><br>将这三个通道结合调整，可以达到增强或抑制画面中某些特定颜色的效果 </p>
+<p><code>EffectGammaR/G/B:</code>对RGB三个通道分别进行gamma矫正；gamma矫正可以简单地理解为：调整“将[实际的颜色]展示为[我们看到的颜色]”这一过程中的映射关系<br>以EffectGammaR(红)为例，将EffectGammaR的值拉高，从视觉上来看就是图像中的红色通道被增强了（色调变红），拉低则图像色调变得更偏蓝绿<br><img src="/2022/10/30/%E3%80%90%E4%B8%AA%E4%BA%BA%E5%90%91%E3%80%91gshade%E8%B0%83%E6%BB%A4%E9%95%9C%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9/gammaRGB-small2.gif"><br>将这三个通道结合调整，可以达到增强或抑制画面中某些特定颜色的效果 </p>
 <p><code>【个人推荐】</code>通过EffectGammaR/G/B来调整颜色时，推荐将上面的<code>Strength(调整强度)</code>与<code>Fade(褪色)</code>参数调高来获得更好的<del>照骗</del>效果</p>
 <p>例如下图，使用的滤镜中EffectGammaR/G/B分别为0.959/1.251/1.137，Fade为0.600,Strength为0.906</p>
 <table style="text-align:center;">
@@ -275,7 +275,7 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
 <p><code>【***注意***】</code>若使用DOF类着色器，请将游戏内集体动作中的【开启景深效果】取消勾选，否则物体边缘会有很明显的锯齿<br><img src="/2022/10/30/%E3%80%90%E4%B8%AA%E4%BA%BA%E5%90%91%E3%80%91gshade%E8%B0%83%E6%BB%A4%E9%95%9C%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9/disablegposedof.png"></p>
 <h3><span id="dof参数说明">DOF参数说明</span></h3><img src="/2022/10/30/%E3%80%90%E4%B8%AA%E4%BA%BA%E5%90%91%E3%80%91gshade%E8%B0%83%E6%BB%A4%E9%95%9C%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9/dofparams.png">
 
-<p><code>DOF_AUTOFOCUS &amp; DOF_MOUSEDRIVEN_AF:</code>建议同时勾选，效果为聚焦到鼠标停留的位置（例如鼠标放在人物上，则聚焦到人物上，模糊与人物层次相差较远的部分，如背景或离镜头太近的物体）<br><code>DOF_BLURRADIUS:</code>DOF模糊的半径，调高则加大被模糊部分的模糊程度<br><code>DOF_NEARBLURCURVE &amp; DOF_FARBLURCURVE:</code>近景与远景模糊时的容差范围，拉大则为降低容差；以远景(FAR)的为例：<br><img src="/2022/10/30/%E3%80%90%E4%B8%AA%E4%BA%BA%E5%90%91%E3%80%91gshade%E8%B0%83%E6%BB%A4%E9%95%9C%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9/farblurcurve.gif"><br>近景(NEAR)的同理；当想要比较细致地保留部分层次的远/近景时可以调整</p>
+<p><code>DOF_AUTOFOCUS &amp; DOF_MOUSEDRIVEN_AF:</code>建议同时勾选，效果为聚焦到鼠标停留的位置（例如鼠标放在人物上，则聚焦到人物上，模糊与人物层次相差较远的部分，如背景或离镜头太近的物体）<br><code>DOF_BLURRADIUS:</code>DOF模糊的半径，调高则加大被模糊部分的模糊程度<br><code>DOF_NEARBLURCURVE &amp; DOF_FARBLURCURVE:</code>近景与远景模糊时的容差范围，拉大则为降低容差；以远景(FAR)的为例：<br><img src="/2022/10/30/%E3%80%90%E4%B8%AA%E4%BA%BA%E5%90%91%E3%80%91gshade%E8%B0%83%E6%BB%A4%E9%95%9C%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9/farblurcurve2.gif"><br>近景(NEAR)的同理；当想要比较细致地保留部分层次的远/近景时可以调整</p>
 <hr>
 <h3><span id="几种不同的dof">几种不同的DOF</span></h3><h4><span id="focaldof">FocalDOF</span></h4><p>模糊力度较小的dof，会给各种物体增加一层类似描边的效果<br><img src="/2022/10/30/%E3%80%90%E4%B8%AA%E4%BA%BA%E5%90%91%E3%80%91gshade%E8%B0%83%E6%BB%A4%E9%95%9C%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9/focaldof.png"></p>
 <hr>
@@ -287,11 +287,12 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
 <h4><span id="martymcflydof">MartyMcFlyDOF</span></h4><p>可以调整模糊图样的形状，在拍摄星空或雪景这种远景中有大量亮点的场景时效果较好<br> <div style="text-align:center;"><img src="/2022/10/30/%E3%80%90%E4%B8%AA%E4%BA%BA%E5%90%91%E3%80%91gshade%E8%B0%83%E6%BB%A4%E9%95%9C%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9/blurshape.png"><br>选择形状</div></p>
 <table style="text-align:center;">
   <tr>
-    <td><div><img src="/2022/10/30/%E3%80%90%E4%B8%AA%E4%BA%BA%E5%90%91%E3%80%91gshade%E8%B0%83%E6%BB%A4%E9%95%9C%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9/snow.png"><br>未开启</div></td>
-    <td><div><img src="/2022/10/30/%E3%80%90%E4%B8%AA%E4%BA%BA%E5%90%91%E3%80%91gshade%E8%B0%83%E6%BB%A4%E9%95%9C%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9/snowblur.png"><br>开启，雪花被模糊为菱形</div></td>
+    <td><div><img src="/2022/10/30/%E3%80%90%E4%B8%AA%E4%BA%BA%E5%90%91%E3%80%91gshade%E8%B0%83%E6%BB%A4%E9%95%9C%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9/snow.png"><br>未开启DOF</div></td>
+    <td><div><img src="/2022/10/30/%E3%80%90%E4%B8%AA%E4%BA%BA%E5%90%91%E3%80%91gshade%E8%B0%83%E6%BB%A4%E9%95%9C%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9/snowblur.png"><br>开启DOF</div></td>
     </tr>
  </table>
  
+<p> 开启MartyMcFlyDOF，并选择模糊图样形状后，雪花被模糊为菱形</p>
 <hr>
 <h2><span id="-sharpen">- Sharpen</span></h2><p>锐化，喜欢效果比较锐利清晰画面效果的可以开启，个人常用的为<code>AdaptiveSharpen</code></p>
 <table style="text-align:center;">
@@ -306,12 +307,13 @@ $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent',
 <h2><span id="-ffkeepui-amp-ffrestoreui">- FFKeepUI &amp; FFRestoreUI</span></h2><p>同时开启这两个着色器可以使游戏内的ui不受滤镜效果的影响，可以用来开着滤镜打游戏：</p>
 <table style="text-align:center;">
   <tr>
-    <td><div><img src="/2022/10/30/%E3%80%90%E4%B8%AA%E4%BA%BA%E5%90%91%E3%80%91gshade%E8%B0%83%E6%BB%A4%E9%95%9C%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9/uimask-off.png"><br>未开启：ui也被调色</div></td>
+    <td><div><img src="/2022/10/30/%E3%80%90%E4%B8%AA%E4%BA%BA%E5%90%91%E3%80%91gshade%E8%B0%83%E6%BB%A4%E9%95%9C%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9/uimask-off.png"><br>未开启</div></td>
     <td><div><img src="/2022/10/30/%E3%80%90%E4%B8%AA%E4%BA%BA%E5%90%91%E3%80%91gshade%E8%B0%83%E6%BB%A4%E9%95%9C%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9/uimask-on.png"><br>开启</div></td>
     </tr>
  </table>
 <br>
 
+<p>未开启<code>FFKeepUI</code>和<code>FFRestoreUI</code>时，游戏ui也被调色，可能会有ui被模糊等问题；开启后则ui保持原样</p>
 <p><code>注意：</code>需要将<code>FFKeepUI</code>放在当前开启的所有着色器的最上方，将<code>FFRestoreUI</code>放在最下方</p>
 <p> 如果记不清当前开启了哪些着色器，可以勾选<code>置顶激活</code>来查看<br> <div style="text-align:center;"><img src="/2022/10/30/%E3%80%90%E4%B8%AA%E4%BA%BA%E5%90%91%E3%80%91gshade%E8%B0%83%E6%BB%A4%E9%95%9C%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9/topactive.png"><br>FFKeepUI &amp; FFRestoreUI摆放顺序</div></p>
 <hr>
