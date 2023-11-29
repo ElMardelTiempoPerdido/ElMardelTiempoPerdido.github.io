@@ -3601,3 +3601,147 @@ nav.pagination {
 	background-color:#999;
 	transition-duration: 1s, 1000ms;
 }
+
+
+/* .log-container {
+	position: relative;
+	height:10vw;
+	width:55vw;
+	overflow:hidden;
+} */
+
+
+@media screen and (min-width:700px){
+	.log-text h3 {
+		overflow: hidden;
+		font-size: 50px;
+		color: #f0f0f0;
+		transition-duration: 1s, 1000ms;
+	}
+	.log-text h3:hover {
+		color: #D8D4CC;
+		transition-duration: 1s, 1000ms;
+	}
+}
+
+
+@media screen and (max-width:700px){
+	.log-text h3 {
+		overflow: hidden;
+		font-size: 36px;
+		color: #f0f0f0;
+		transition-duration: 1s, 1000ms;
+	}
+	.log-text h3:hover {
+		color: #D8D4CC;
+		transition-duration: 1s, 1000ms;
+	}
+}
+
+
+.log-suffix{
+	float: left;
+	margin-top: -10px;
+	text-align: center;
+}
+
+.log-suffix a {
+	color: #666666;
+	font-size: 10px;
+	/* font-family:'Courier New'; */
+}
+
+
+@media screen and (min-width:700px){
+	.tool-container{
+		position: relative;
+		overflow:hidden;
+		height:31vh;
+		width:93vh;
+	}
+
+	.screenshot-container{
+		position: relative;
+		overflow:hidden;
+	}
+}
+
+@media screen and (max-width:700px){
+	.tool-container{
+		position: relative;
+		overflow:hidden;
+		height:20vh;
+		width:60vh;
+	}
+	.screenshot-container{
+		position: relative;
+		overflow:hidden;
+	}
+}
+
+
+.maasktool {
+	position:absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	transition:opacity 1s;
+	opacity: 0;
+}
+.maasktool--blur {
+	backdrop-filter: blur(5px);
+}
+.maasktool:hover{
+	position:absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	transition:opacity 1s;
+	opacity: 1;
+}
+
+.tooltext{
+	position: absolute;
+	top:50%;
+	left:10%;
+	margin-top:-3.5vw;
+	margin-left:-3vw;
+	color:rgb(100,77,52);
+	font-size:1vw;
+}
+
+
+.maaskscreen {
+	position:absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	transition:opacity 0.6s;
+	opacity: 0;
+}
+.maaskscreen--blur {
+	backdrop-filter: blur(5px);
+}
+.maaskscreen:hover{
+	position:absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	transition:opacity 0.6s;
+	opacity: 1;
+}
+
+
+.screentext{
+	writing-mode: vertical-rl;
+	position: absolute;
+	margin-top:1vw;
+	margin-left:10%;
+	color:#555555;
+	font-size:1vw;
+	text-shadow: 0px 0px 1px #ffffff;
+}
